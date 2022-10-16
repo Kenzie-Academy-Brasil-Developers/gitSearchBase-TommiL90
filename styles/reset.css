@@ -1,0 +1,9 @@
+body, header, h1, button, section, ul, li, h2, figure, img, figcaption, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}

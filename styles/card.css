@@ -1,0 +1,13 @@
+.card{
+    height: 15.2rem;
+    width: 24rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #D6336C;
+}
+
+.card:hover{
+    border: 2px solid #ffff
+}

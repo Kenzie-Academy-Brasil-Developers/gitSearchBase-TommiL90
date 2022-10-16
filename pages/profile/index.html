@@ -4,12 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="/styles/globalStyles.css"/>
+    <link rel="stylesheet" href="/styles/displays.css" />
+    <link rel="stylesheet" href="/styles/sizes.css" />
+    <link rel="stylesheet" href="/styles/backgrounds.css"/>
+    <link rel="stylesheet" href="/styles/spaces.css"/>
+    <link rel="stylesheet" href="/styles/inputs.css"/>
+    <link rel="stylesheet" href="/styles/buttons.css"/>
+    <link rel="stylesheet" href="/styles/texts.css"/>
+    <link rel="stylesheet" href="/styles/card.css"/>
+
     <link rel="stylesheet" href="index.css" />
-    <title>Nome do usuário Github</title>
+    <title>Profile</title>
   </head>
-  <body>
-    <main></main>
+  <body class="w-screen h-screen p-3 bg-grey-2 flex justify-center">
+    <main class="border flex flex-col gap-2">
+      <section id="profile" class="flex justify-between items-center">
+        <div>
+          <span><img src="" alt=""></span>
+          <span class="">
+            <h1>User</h1>
+            <p>developer</p>
+          </span>
+        </div>
+        <div class="flex gap">
+          <a href="#"><button class="button-default-2">Email</button></a>
+          <button class="button-default-2">Trocar de usuario</button>
+        </div>
+      </section>
+      <ul id="repos" class="flex wrap gap">
+       
+       
+      </ul>
+    </main>
+ 
     <script src="index.js"></script>
   </body>
 </html>

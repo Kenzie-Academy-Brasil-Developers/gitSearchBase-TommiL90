@@ -1,0 +1,14 @@
+.input-default {
+  width: 316px;
+  height: 38px;
+  padding-left: 1rem;
+  background-color: var(--color-grey-1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+
+.input-default::placeholder {
+  color: var(--color-grey-6);
+  padding-left: 1rem;
+}

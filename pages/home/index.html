@@ -4,12 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/globalStyles.css" />
+    <link rel="stylesheet" href="/styles/globalStyles.css"/>
+    <link rel="stylesheet" href="/styles/displays.css" />
+    <link rel="stylesheet" href="/styles/sizes.css" />
+    <link rel="stylesheet" href="/styles/backgrounds.css"/>
+    <link rel="stylesheet" href="/styles/spaces.css"/>
+    <link rel="stylesheet" href="/styles/inputs.css"/>
+    <link rel="stylesheet" href="/styles/buttons.css"/>
+    <link rel="stylesheet" href="/styles/texts.css"/>
+
     <link rel="stylesheet" href="index.css" />
-    <title>Git Search</title>
+    <title>TommiL90</title>
   </head>
   <body>
-    <main></main>
+    <main class="w-screen h-screen flex">
+      <section
+        class="w-50 h-screen flex flex-col items-center justify-center bg-primary"
+      >
+        <div class="flex flex-col justify-start gap-2">
+          <h1 class="title-1">Git search</h1>
+          <p class="text-1">Encontre e se conecte com profissionais de forma rápida e fácil</p>
+          <div class="flex gap items-center">
+            <p class="text-2">Achados Recentemente:</p>
+            <ul>
+              <li><img class="img-perfil-sugery" src="https://pxhere.com/es/photo/451653" alt="" /></li>
+             
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="border w-50 h-screen flex flex-col items-center justify-center bg-grey-2"
+      >
+        <div class="flex flex-col justify-start gap-2">
+          <h2 class="title-2">Procurar por um usuario</h2>
+          <form class="flex flex-col gap">
+            <label for="input-init" class="text-3">Usuário github</label>
+            <input
+              type="text"
+              id="input-init"
+              class="input-default"
+              placeholder="Digite um usuario de github aqui..."
+            />
+            <button type="submit" class="button-default">Ver perfil do github</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
