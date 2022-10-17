@@ -48,20 +48,20 @@ try{
     localStorage.setItem("user", value)
  
  
-      //  const newArr =  []
-      //  newArr.push(value)
+       const newArr =  []
+       newArr.push(value)
  
  
-      //  if (localStorage.getItem("users").length ){
+       if (localStorage.getItem("users").length ){
  
-      //     const parseJson = JSON.parse(localStorage.getItem("users")) || []
-      //     const arr = [...parseJson, value]
+          const parseJson = JSON.parse(localStorage.getItem("users")) || []
+          const arr = [...parseJson, value]
  
-      //     localStorage.setItem("users", JSON.stringify(arr))
-      //  }else{
+          localStorage.setItem("users", JSON.stringify(arr))
+       }else{
  
-      //     localStorage.setItem("users", JSON.stringify(newArr))
-      //  }
+          localStorage.setItem("users", JSON.stringify(newArr))
+       }
     
  
    //   window.location.href = window.location.href.replace("home/index.html", "profile/index.html")
