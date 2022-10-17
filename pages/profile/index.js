@@ -1,19 +1,19 @@
 /* Desenvolva sua lógica aqui...*/
 
 
-async function teste (){
+// async function teste (){
 
-    const urlBase = `https://api.github.com/users/samuelleao`
-    const urlRepos = `https://api.github.com/users/samuelleao/repos`
+//     const urlBase = `https://api.github.com/users/samuelleao`
+//     const urlRepos = `https://api.github.com/users/samuelleao/repos`
     
-    const profile = await getInfo(urlBase)
-    const repos = await getInfo(urlRepos)
+//     const profile = await getInfo(urlBase)
+//     const repos = await getInfo(urlRepos)
   
-    renderProfile(profile)
-    renderRepos(repos)
-    }
+//     renderProfile(profile)
+//     renderRepos(repos)
+//     }
     
-teste ()
+// teste ()
 
 async function getInfo (url){
     const response = await fetch(`${url}`)
@@ -69,10 +69,10 @@ function renderRepos(info){
     
     const ul = document.getElementById("repos")
     
-    ul.insertAdjacentHTML = ""
+    ul.innerHTML = ""
 
     info.forEach(element => {
-        console.log(ul)
+       
             const name          = element.name
             const description   = element.description
             const url           = element.url    
