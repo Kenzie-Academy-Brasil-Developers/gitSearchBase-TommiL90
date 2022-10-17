@@ -1,26 +1,28 @@
 /* Desenvolva sua lógica aqui...*/
 
 
-// async function teste (){
+async function teste (){
 
-//     const urlBase = `https://api.github.com/users/samuelleao`
-//     const urlRepos = `https://api.github.com/users/samuelleao/repos`
+    const urlBase = `https://api.github.com/users/samuelleao`
+    const urlRepos = `https://api.github.com/users/samuelleao/repos`
     
-//     const profile = await getInfo(urlBase)
-//     const repos = await getInfo(urlRepos)
+    const profile = await getInfo(urlBase)
+    const repos = await getInfo(urlRepos)
   
-//     renderProfile(profile)
-//     renderRepos(repos)
-//     }
+    renderProfile(profile)
+    renderRepos(repos)
+    }
     
-// teste ()
+teste ()
 
-// async function getInfo (url){
-//     const response = await fetch(`${url}`)
-//     const data =  await response.json() 
+async function getInfo (url){
+    const response = await fetch(`${url}`)
+    const data =  await response.json() 
     
-//     return data
-//  }
+    return data
+ }
+
+
 
 async function userInfo (dado) {
      await fetch(`https://api.github.com/users/${dado}`)
@@ -56,7 +58,7 @@ function renderProfile(info){
         </div>
     </div>
     <div class="flex gap">
-        <a href="${email}"><button class="button-default-2">Email</button></a>
+        <a href="mailito:${email}"><button class="button-default-2">Email</button></a>
         <button class="button-default-2">Trocar de usuario</button>
     </div>
     `)
@@ -114,4 +116,6 @@ function renderRepos(info){
 
 userInfo (localStorage.getItem("user"))
 userRepos (localStorage.getItem("user"))
+
+
 
