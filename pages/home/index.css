@@ -37,6 +37,9 @@ li:hover > small {
   display: flex;
 }
 
+/* button{
+  opacity: 30%;
+} */
 .loading{
   animation: spinner 1s infinite linear;
 }

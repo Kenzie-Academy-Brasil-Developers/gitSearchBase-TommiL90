@@ -28,7 +28,7 @@ function getUserByForm () {
    const form = document.querySelector("form")
 
 try{
-   form.addEventListener("submit", async e => {
+   form.addEventListener("submit", e => {
 
       e.preventDefault()
 
@@ -52,7 +52,7 @@ try{
        newArr.push(value)
  
  
-       if (localStorage.getItem("users").length ){
+       if (localStorage.getItem("users")){
  
           const parseJson = JSON.parse(localStorage.getItem("users")) || []
           const arr = [...parseJson, value]
@@ -77,6 +77,21 @@ try{
 
 
  getUserByForm ()
+
+function intupDisabled (){
+
+   const input = document.querySelector("input")
+   const button = document.querySelector("#button-get-API")
+
+   input.addEventListener("input", e => {
+
+      e.preventDefault()
+     
+      button.disabled = "false"
+   })
+}
+
+
 
 function recentProfiles() {
 
@@ -111,5 +126,5 @@ function recentProfiles() {
 }
 
 
-//  recentProfiles()
+ recentProfiles()
 
