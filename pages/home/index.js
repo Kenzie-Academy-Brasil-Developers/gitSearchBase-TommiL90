@@ -64,7 +64,9 @@ try{
       //  }
     
  
-     window.location.href = window.location.href.replace("home/index.html", "profile/index.html")
+   //   window.location.href = window.location.href.replace("home/index.html", "profile/index.html")
+
+   window.location.assign("./pages/profile/index.html")
  
   })
 }catch{
