@@ -59,9 +59,17 @@ function renderProfile(info){
     </div>
     <div class="flex gap">
         <a href="mailito:${email}"><button class="button-default-2">Email</button></a>
-        <button class="button-default-2">Trocar de usuario</button>
+        <button id="change-user" class="button-default-2">Trocar de usuario</button>
     </div>
     `)
+
+    const button = document.getElementById("change-user")
+
+    button.addEventListener("click", e => {
+
+        e.preventDefault()
+        window.location.assign("../../index.html")
+    })
 }
 
 
@@ -113,6 +121,8 @@ function renderRepos(info){
         return ul.appendChild(li)
     });
 }
+
+
 
 userInfo (localStorage.getItem("user"))
 userRepos (localStorage.getItem("user"))

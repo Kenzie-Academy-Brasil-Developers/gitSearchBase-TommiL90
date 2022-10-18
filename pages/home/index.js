@@ -87,11 +87,12 @@ function intupDisabled (){
 
       e.preventDefault()
      
-      button.disabled = "false"
+      button.disabled = false
+      button.style.opacity = "100%"
    })
 }
 
-
+intupDisabled ()
 
 function recentProfiles() {
 
