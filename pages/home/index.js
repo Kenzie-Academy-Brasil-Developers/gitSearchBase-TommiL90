@@ -1,28 +1,4 @@
 
-// function searchIntoApi() {
-
-//    const button = document.getElementById("button-get-API")
-//    console.log(button)
-//    button.addEventListener("click", (e) => {
-
-//       e.preventDefault()
-//       button.innerHTML = ""
-
-//       const img = document.createElement("img")
-//       img.src   = "/assets/spinner.svg"
-//       img.alt   = "spiner"
-//       img.classList.add("loading")
-
-//       button.appendChild(img)
-
-//       // getUserByForm (button)
-//    })
-// }
-
-
-
-
-
 function getUserByForm () {
 
    const form = document.querySelector("form")
@@ -78,7 +54,6 @@ try{
 } 
 }
 
-
  getUserByForm ()
 
 function inputDisabled (){
@@ -118,17 +93,21 @@ function recentProfiles() {
 
          ul.insertAdjacentHTML("afterend", `
 
-         <li class="flex flex-col">
+         <li class="flex flex-col relative">
                 <a href="${user.url}"><img class="img-perfil-sugery" src="${user.avatar_url}" alt="${user.name}" /></a>
                 <small>Acessar este perfil</small>
               </li>
          `)
+         
          )
   })
-   
-
 }
 
+function renderRecentProfile(data){
+   const user = data.login
+   localStorage.setItem("user", user)
+   window.location.assign("./pages/profile/index.html")
+}
 
  recentProfiles()
 
