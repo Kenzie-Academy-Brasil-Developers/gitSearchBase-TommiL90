@@ -14,7 +14,7 @@ try{
       const response = await fetch (`https://api.github.com/users/${value}`)
      
       if (response.status === 404){
-        return alert ("usuario não encontrado")
+        return console.log(response)
       }else{
 
          const button = document.getElementById("button-get-API")
@@ -49,8 +49,8 @@ try{
       //   window.location.href = window.location.href.replace("home/index.html", "profile/index.html")
       } 
   })
-}catch{
-   alert ("alguma coisa esta errada")
+}catch (err){
+   console.log(err)
 } 
 }
 
@@ -78,7 +78,7 @@ function recentProfiles() {
    const recentProfiles       = JSON.parse(localStorage.getItem("users"))
    const arrRecentProfiles    = [...recentProfiles].slice(-3) 
 
-   console.log(arrRecentProfiles)
+   // console.log(arrRecentProfiles)
    ul.innerHTML = ""
 
   arrRecentProfiles.forEach(async user => {
@@ -89,7 +89,7 @@ function recentProfiles() {
       .then(e => e.json())
       .then(user =>
          
-         
+       
 
          ul.insertAdjacentHTML("afterend", `
 
