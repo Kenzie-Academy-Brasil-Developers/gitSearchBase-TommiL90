@@ -14,7 +14,13 @@ try{
       const response = await fetch (`https://api.github.com/users/${value}`)
      
       if (response.status === 404){
-        return console.log(response)
+        
+         const alert = document.querySelector(".alertUserNFound")
+         console.log(alert)
+         alert.style.color   = "hsl(349, 57%, 50%)" 
+         alert.innerText     = "User não encontrado" 
+        
+         return console.log(response)
       }else{
 
          const button = document.getElementById("button-get-API")
